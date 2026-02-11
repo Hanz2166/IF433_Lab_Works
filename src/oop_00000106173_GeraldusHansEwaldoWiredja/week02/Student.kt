@@ -13,4 +13,9 @@ class Student(
             println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
         }
     }
+
+    /*Secondary Constructor
+    Wajib memanggil Primary Constructor menggunakan 'this()'
+    constructor (name: String, nim: String) : this(name, nim, major, "Non-matriculated"
+     */
 }
