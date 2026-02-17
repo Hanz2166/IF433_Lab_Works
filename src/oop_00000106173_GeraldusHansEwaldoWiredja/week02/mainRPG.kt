@@ -1,2 +1,0 @@
-package oop_00000106173_GeraldusHansEwaldoWiredja.week02
-

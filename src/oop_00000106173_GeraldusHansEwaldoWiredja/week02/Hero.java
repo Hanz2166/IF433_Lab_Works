@@ -1,6 +1,6 @@
 package oop_00000106173_GeraldusHansEwaldoWiredja.week02;
 
-class hero (
+class Hero(
     val name: String,
     var hp: Int = 100,
     var baseDamage: Int
@@ -18,7 +18,7 @@ class hero (
         println("$name menerima $damage damage, hp = $hp")
     }
 
-    fun isAlive(): Boolean{
-        return hp >
+    fun isAlive(): Hero {
+        return hp > 0
     }
 }
