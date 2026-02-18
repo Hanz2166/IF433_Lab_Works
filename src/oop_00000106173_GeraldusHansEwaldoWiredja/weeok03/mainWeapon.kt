@@ -10,4 +10,13 @@ fun main(){
     println("Weapon damage = ${weapon.Damage}")
 
     println("Weapon tier ${weapon.tier}")
+
+
+    val Player = Player("Roland")
+
+    Player.recieveEXP(50)
+    println("Level Sekarang: ${Player.level}")
+
+    Player.recieveEXP(60)
+    println("Level Sekarang = ${Player.level}")
 }
