@@ -17,4 +17,7 @@ class Employee (val name: String){
         performanceRating++
         println("Kinerja $name menignkat! (Rating: $performanceRating)")
     }
+
+    val tax: Double
+        get() = salary * 0.1
 }
