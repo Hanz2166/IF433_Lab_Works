@@ -1,4 +1,4 @@
-package oop_00000106173_GeraldusHansEwaldoWiredja.weeok03
+package oop_00000106173_GeraldusHansEwaldoWiredja.week03
 
 class Weapon (val name: String){
     var Damage: Int = 0

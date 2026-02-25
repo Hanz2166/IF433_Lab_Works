@@ -1,4 +1,4 @@
-package oop_00000106173_GeraldusHansEwaldoWiredja.weeok03
+package oop_00000106173_GeraldusHansEwaldoWiredja.week03
 
 fun main(){
     val weapon = Weapon("Inverted Spear of Heaven")
