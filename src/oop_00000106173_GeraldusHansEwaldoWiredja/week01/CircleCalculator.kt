@@ -1,15 +1,15 @@
 package oop_00000106173_GeraldusHansEwaldoWiredja.week01
 
 fun main() {
-    val radius= 7.0
-    val pi= 3.14
+    val radius = 7.0
+    val pi = 3.14
 
-    var area: Double = radius * pi * radius
+    val area: Double = radius * pi * radius
 
     println("Radius: $radius, Area: $area")
-    println(CheckSize(area))
+    println(checkSize(area))
 }
 
-fun CheckSize(area: Double): String =
-    if (area > 100) "It's quite big, Impressive" else "SO TINY!!"
-}
+fun checkSize(area: Double): String =
+    if (area > 100) "It's quite big, Impressive"
+    else "SO TINY!!"

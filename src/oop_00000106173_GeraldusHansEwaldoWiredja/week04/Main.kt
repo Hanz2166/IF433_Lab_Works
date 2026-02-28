@@ -7,8 +7,15 @@ fun main() {
     generalVehicle.accelerate()
 
     println("\n--- Testing Cara ---")
-    val myCar = Car("Hyundai")
+    val myCar = Car("Hyundai", 4)
     myCar.openTrunk()   // Memanggil method untuk milik densiri
     myCar.honk()        // Memanggil method yang sudah dioverride
     myCar.accelerate()  // Memanggil gabungan method Parent dan Child
+
+    println("\n--- Testing Cara ---")
+    val myelectricCar = ElectricCar("Tesla", 4, 90)
+
+    myelectricCar.openTrunk()
+    myelectricCar.accelerate()
+    myelectricCar.accelerate()
 }
