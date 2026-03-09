@@ -1,6 +1,6 @@
 package oop_00000106173_GeraldusHansEwaldoWiredja.week05
 
-abstract class CreditCard (accountName: String, val limit: Double): PaymentMethod (accountName) {
+class CreditCard (accountName: String, val limit: Double): PaymentMethod (accountName) {
     var usedAmount = 0.0
 
     override fun processPayment(amount: Double) {

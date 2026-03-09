@@ -1,6 +1,6 @@
 package oop_00000106173_GeraldusHansEwaldoWiredja.week05
 
-abstract class EWallet (accountName: String, var balance: Double) : PaymentMethod(accountName) {
+class EWallet (accountName: String, var balance: Double) : PaymentMethod(accountName) {
     override fun processPayment(amount: Double) {
         if(balance >= amount) {
             balance -= amount

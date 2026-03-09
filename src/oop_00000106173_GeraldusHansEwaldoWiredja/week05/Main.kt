@@ -1,6 +1,9 @@
 package week05
 
+import oop_00000106173_GeraldusHansEwaldoWiredja.week05.CreditCard
+import oop_00000106173_GeraldusHansEwaldoWiredja.week05.EWallet
 import oop_00000106173_GeraldusHansEwaldoWiredja.week05.MathHelper
+import oop_00000106173_GeraldusHansEwaldoWiredja.week05.PaymentMethod
 
 fun main() {
     val dosen1 = Dosen("Pak Dante", "000010")
@@ -27,10 +30,23 @@ fun main() {
         }
         println("----------------------------------------------------------")
     }
-    println("\n=== math")
+    println("\n=== math ===")
     val math = MathHelper()
 
     println("Luas Persegi: ${math.hitungLuas(4)}")
     println("Luas Persegi Panjang: ${math.hitungLuas(5,3)}")
     println("Luas Lingkaran: ${math.hitungLuas(7.0)}")
+
+    println("\n------------------------------------------------------")
+    println("=== Proses bayar ===")
+
+    val eWallet = EWallet("Navia", 50000.0);
+    val creditCard = CreditCard("Wriothesley", 10000000000.0);
+
+    val paymentMethod: List<PaymentMethod> = listOf(eWallet, creditCard);
+
+    for(method in paymentMethod) {
+        method.processPayment(45000.0)
+        println()
+    }
 }
