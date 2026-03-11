@@ -1,7 +1,7 @@
 package week06
 
 interface Clickable {
-    val name: String = "Secret Button"
+    val name: String //Abstract property, tidak ada nilai default
 
     fun click()
 }
