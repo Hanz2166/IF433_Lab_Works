@@ -1,6 +1,6 @@
 package week06
 
-class SmartLamp(override id: String, override name: String): SmartDevice, Switchable {
+class SmartLamp(override val id: String, override val name: String): SmartDevice, Switchable {
     override fun turnOn() {
         println("$name lamp turned on")
     }

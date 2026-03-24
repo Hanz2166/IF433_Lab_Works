@@ -28,4 +28,11 @@ fun main() {
     hub.addDevice(lamp)
     hub.addDevice(Speaker)
     hub.addDevice(cctv)
+
+    println("\n===TESTING SMARTHOMEHUB===")
+    println("===SECURITY MODE===")
+    hub.activateSecurityMode()
+
+    println("\n===TURN OFF ALL DEVICES===")
+    hub.turnOffAllSwitches()
 }

@@ -1,6 +1,6 @@
 package week06
 
-class SmartCCTV (override id: String, override name: String): SmartDevice, Switchable, Record{
+class SmartCCTV (override val id: String, override val name: String): SmartDevice, Switchable, Record{
     override fun turnOn() {
         println("CCTV $name activated")
         startRecord()

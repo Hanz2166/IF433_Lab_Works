@@ -1,7 +1,13 @@
 package week06
 
-interface SmartDevice {val id: String, val name: String}
-interface Switchable {fun turnOn(), fun turnOff()}
+interface SmartDevice {
+    val id: String
+    val name: String
+}
+interface Switchable {
+    fun turnOn()
+    fun turnOff()
+}
 interface Record {
     fun startRecord()
     fun stopRecord(){
