@@ -12,6 +12,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/oop_00000106173_GeraldusHansEwaldoWiredja/week03" />
       <excludeFolder url="file://$MODULE_DIR$/src/oop_00000106173_GeraldusHansEwaldoWiredja/week04" />
       <excludeFolder url="file://$MODULE_DIR$/src/oop_00000106173_GeraldusHansEwaldoWiredja/week05" />
+      <excludeFolder url="file://$MODULE_DIR$/src/oop_00000106173_GeraldusHansEwaldoWiredja/week06" />
+      <excludeFolder url="file://$MODULE_DIR$/src/week06" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
