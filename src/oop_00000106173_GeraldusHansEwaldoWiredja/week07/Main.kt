@@ -37,42 +37,8 @@ fun main() {
         is ApiResponse.Loading -> "Tampilkan Spinner"
     }
 
-    val event1: BattleState = BattleState.MonsterEncounter("Naga Api")
-    val event2: BattleState = BattleState.LootDropped(
-        GameItem("Pedang Emas", 50, ItemRarity.RARE)
-    )
-    val event3: BattleState = BattleState.GameOver("HP habis")
-    val event4: BattleState = BattleState.SafeZone
+    println("\n=== SIMULASI TUGAS MANDIRI RPG ===")
 
-    fun handleEvent(state: BattleState) {
-        when (state) {
-            is BattleState.MonsterEncounter -> {
-                println("Bertemu monster: ${state.monsterName}")
-            }is BattleState.LootDropped -> {
-                println("Mendapat item: ${state.item.name}")
-            }is BattleState.GameOver -> {
-                println("Game Over: ${state.reason}")
-            }
-            BattleState.SafeZone -> {
-                println("Kamu berada di zona aman")
-            }
-        }
-    }
-
-    handleEvent(event1)
-    handleEvent(event2)
-    handleEvent(event3)
-    handleEvent(event4)
-
-    val event5 = BattleState.MonsterEncounter("Goblin")
-    val event6 = BattleState.LootDropped(
-        GameItem("Pedang Api", 40, ItemRarity.RARE)
-    )
-    val event7 = BattleState.GameOver("Dikalahkan Boss")
-    val event8 = BattleState.SafeZone
-
-    processEvent(event5)
-    processEvent(event6)
-    processEvent(event7)
-    processEvent(event8)
+    GameManager.startGame()
+    GameManager.startGame()
 }
