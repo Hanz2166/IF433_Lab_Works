@@ -5,8 +5,7 @@ fun main() {
     val emptyOrder = Orders(null, null)
 
     //rantai safe calls yang elegean
-    val destination = emptyOrder.deliveryDetails?.address?.city?.name ?:
-    "Kota Tidak Diketahui"
+    val destination = emptyOrder.deliveryDetails?.address?.city ?: "Kota Tidak Diketahui"
     println("Tujuan pengiriman: $destination")
 
     println("\n===  Test Let Block  ===")
