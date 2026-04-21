@@ -34,4 +34,9 @@ fun main() {
          //hanay cetak jika cast sukses
         text?.let { println("Ditemukan teks: ${it.uppercase()}") }
     }
+
+    val someObject: Any = 100 //Tiper asli interger
+    //coba cast ke string. Jika gagal(null), ganti dengan "unknown String"
+    val safeString = someObject as? String?: "Unknown String"
+    println("Hasil cast + fallback: $safeString")
 }
