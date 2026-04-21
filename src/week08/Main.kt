@@ -47,4 +47,14 @@ fun main() {
     }catch (e: NullPointerException){
         println("Crash (NPE)! Jangan gunakan !! secara sembarangan.")
     }
+
+    val apiResponse: Map<String, String?> = mapOf("status" to "200", "token" to null)
+    try {
+        //ALih-alih apiResponse
+        val token = requireNotNull(apiResponse["token"]){
+            "Critical Exception: Token is missing in API response!"
+        }
+    }catch (e: IllegalArgumentException){
+        println("Error: ${e.message}")
+    }
 }
