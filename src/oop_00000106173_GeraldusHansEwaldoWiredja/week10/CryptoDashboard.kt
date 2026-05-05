@@ -10,3 +10,10 @@ println("Status: ${response.status}")
 response.data.forEach {
     println("Coin: ${it.name}, Balance: ${it.balance}")
 }
+
+val txRepo = WalletRepository<Transaction>()
+txRepo.add(Transaction("TX001", 0.1))
+txRepo.add(Transaction("TX002", 2.5))
+
+println("\n=== Transaction History ===")
+txRepo.getAll().forEach { println("ID: ${it.id}, Amount: ${it.amount}") }
