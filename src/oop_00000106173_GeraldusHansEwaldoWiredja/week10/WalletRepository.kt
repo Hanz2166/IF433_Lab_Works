@@ -9,4 +9,8 @@ class WalletRepository<T> {
     fun getAll(): List<T> {
         return items
     }
+
+    fun search(predicate: (T) -> Any): List<T> {
+        return items.filter { predicate(it) as? Boolean ?: false }
+    }
 }
