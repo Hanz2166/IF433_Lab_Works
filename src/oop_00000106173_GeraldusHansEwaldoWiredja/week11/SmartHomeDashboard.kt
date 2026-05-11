@@ -48,5 +48,9 @@ fun main() {
             println("  - ${device.name} (${device.category})")
         }
     }
+
+    println("\n=== Total Daya Sistem ===")
+    val totalPower = homeDevices.run { sumOf { it.powerLoad } }
+    println("Total daya yang digunakan: $totalPower Watt")
 }
 
