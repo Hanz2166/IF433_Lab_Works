@@ -40,5 +40,13 @@ fun main() {
     searchResult?.let { device ->
         println("Ditemukan: ${device.diagnose()}")
     }
+
+    println("\n=== Rangkuman Sistem ===")
+    with(homeDevices) {
+        println("Total perangkat terdaftar: ${this.size}")
+        this.forEach { device ->
+            println("  - ${device.name} (${device.category})")
+        }
+    }
 }
 
