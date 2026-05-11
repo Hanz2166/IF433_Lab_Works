@@ -8,6 +8,13 @@ fun main() {
     }
     println(user)
 
+    println("\n=== Test Also ===")
+    val numbers = mutableListOf(1, 2, 3)
+    numbers.also {
+        println("Log sebelum ditabmbah: $it")
+    }.add(4)
+    println("Setelah ditambah: $numbers")
+
     println("\n=== Test Extension Functions ===")
     println("Alen".addGreeting())
     println("Hi".repeatTimes(3))
