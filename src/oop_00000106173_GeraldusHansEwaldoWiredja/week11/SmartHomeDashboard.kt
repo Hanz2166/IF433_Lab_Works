@@ -34,5 +34,11 @@ fun main() {
         homeDevices.add(device)
         println("✓ Alat pakan ditambahkan: ${device.diagnose()}")
     }
+
+    println("\n=== Pencarian Perangkat ===")
+    val searchResult = homeDevices.find { it.category == "Camera" }
+    searchResult?.let { device ->
+        println("Ditemukan: ${device.diagnose()}")
+    }
 }
 
