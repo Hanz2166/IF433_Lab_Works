@@ -8,7 +8,7 @@ fun main() {
         powerLoad = 12
     }.also { device ->
         homeDevices.add(device)
-        println("✓ Lampu ditambahkan: ${device.diagnose()}")
+        println("Lampu ditambahkan: ${device.diagnose()}")
     }
 
     println("\n=== Konfigurasi Smart Security ===")
@@ -18,7 +18,7 @@ fun main() {
     }.also { device ->
         println("(LOG) Kamera terhubung")
         homeDevices.add(device)
-        println("✓ Kamera ditambahkan: ${device.diagnose()}")
+        println("Kamera ditambahkan: ${device.diagnose()}")
     }
 
     println("\n=== Konfigurasi Smart HVAC ===")
@@ -26,13 +26,13 @@ fun main() {
         SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
     }.also { device ->
         homeDevices.add(device)
-        println("✓ AC ditambahkan: ${device.diagnose()}")
+        println("AC ditambahkan: ${device.diagnose()}")
     }
 
     println("\n=== Konfigurasi Pet Care ===")
     SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10).also { device ->
         homeDevices.add(device)
-        println("✓ Alat pakan ditambahkan: ${device.diagnose()}")
+        println("Alat pakan ditambahkan: ${device.diagnose()}")
     }
 
     println("\n=== Pencarian Perangkat ===")
@@ -52,5 +52,10 @@ fun main() {
     println("\n=== Total Daya Sistem ===")
     val totalPower = homeDevices.run { sumOf { it.powerLoad } }
     println("Total daya yang digunakan: $totalPower Watt")
+
+    println("\n=== Diagnostik Lengkap Semua Perangkat ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
 }
 

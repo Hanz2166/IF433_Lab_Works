@@ -7,7 +7,7 @@ fun String.addGreeting(): String {
 
 //Extension function dengan parameter
 fun String.repeatTimes(n: Int): String {
-    return.this.repeat(n)
+    return this.repeat(n)
 }
 
 fun String?.isNullOrEmptyCustom(): Boolean {
