@@ -1,7 +1,14 @@
 package oop_00000106173_GeraldusHansEwaldoWiredja.week11
 
 fun main() {
-    println("=== Test Extension Functions ===")
+    println("=== Test Apply ===")
+    val user = User().apply{
+        name = "Alex"
+        age = 25
+    }
+    println(user)
+
+    println("\n=== Test Extension Functions ===")
     println("Alen".addGreeting())
     println("Hi".repeatTimes(3))
 
