@@ -10,5 +10,15 @@ fun main() {
         homeDevices.add(device)
         println("✓ Lampu ditambahkan: ${device.diagnose()}")
     }
+
+    println("\n=== Konfigurasi Smart Security ===")
+    SmartDevice("Ezviz Outdoor", "Camera").apply {
+        isOnline = true
+        powerLoad = 5
+    }.also { device ->
+        println("(LOG) Kamera terhubung")
+        homeDevices.add(device)
+        println("✓ Kamera ditambahkan: ${device.diagnose()}")
+    }
 }
 
