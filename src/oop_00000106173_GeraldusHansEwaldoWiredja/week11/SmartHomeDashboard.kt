@@ -20,5 +20,19 @@ fun main() {
         homeDevices.add(device)
         println("✓ Kamera ditambahkan: ${device.diagnose()}")
     }
+
+    println("\n=== Konfigurasi Smart HVAC ===")
+    run {
+        SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
+    }.also { device ->
+        homeDevices.add(device)
+        println("✓ AC ditambahkan: ${device.diagnose()}")
+    }
+
+    println("\n=== Konfigurasi Pet Care ===")
+    SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10).also { device ->
+        homeDevices.add(device)
+        println("✓ Alat pakan ditambahkan: ${device.diagnose()}")
+    }
 }
 
