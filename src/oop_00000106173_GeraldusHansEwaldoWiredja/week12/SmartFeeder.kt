@@ -13,4 +13,16 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 
 fun main() {
     var currentKibbleStock = 50
+
+    println("=== Simulasi Jadwal Makan Pagi ===")
+    try {
+        currentKibbleStock = dispenseKibble(requestedGram = 80, availableGram = currentKibbleStock, isJammed = false)
+        println("Pagi: Kibble terdispensi berhasil. Sisa stok: $currentKibbleStock gr")
+    } catch (e: DispenserJamException) {
+        println("Error Pagi: ${e.message}")
+    } catch (e: FoodEmptyException) {
+        println("Error Pagi: ${e.message}")
+    } catch (e: Exception) {
+        println("Error Pagi (General): ${e.message}")
+    }
 }
