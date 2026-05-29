@@ -24,5 +24,7 @@ fun main() {
         println("Error Pagi: ${e.message}")
     } catch (e: Exception) {
         println("Error Pagi (General): ${e.message}")
+    } finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
 }
