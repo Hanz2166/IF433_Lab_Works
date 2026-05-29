@@ -10,11 +10,13 @@ class BankAccount(var balance: Double) {
     fun withdraw(amount: Double): Double {
         if(amount < 0){
             throw IllegalArgumentException("Amount must be greater than 0")
-        }if(amount>balance) {
+        }
+        if(amount > balance) {
             throw InsufficientFundsException(amount, balance)
         }
         balance -= amount
         println("Withdraw Success. Remaining balance: $balance")
+        return balance
     }
 }
 

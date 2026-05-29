@@ -7,17 +7,18 @@ fun main() {
     }
 
     //patern: getorElse
-    val safeValue = result.getOrElse {-1}
+    val safeValue = result.getOrElse { -1 }
     println("Safe Value (getOrElse): $safeValue")
 
     //patern: recover (bisa mengubah tipe kegagalan jadi sukses)
-    val recovered = result.recover {0}.getOrNull()
+    val recovered = result.recover { 0 }.getOrNull()
     println("Recovered Value: $recovered")
 
     runCatching {
         "100".toInt()
-    }.onSuccess {v->
+    }.onSuccess { v ->
         println("Berhasil dikonversi; $v")
-    }onFailure {e ->
+    }.onFailure { e ->
         println("Gagal konversi: ${e.message}")
     }
+}
